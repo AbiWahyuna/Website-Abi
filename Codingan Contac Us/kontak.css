@@ -1,0 +1,91 @@
+html, body{
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+
+body{
+    background-size: 350vh;
+    position: relative;
+   background-image: url("https://wallpapercave.com/wp/wp4289104.jpg");
+    display: flex;
+    justify-content: center;
+   
+}
+
+.h1{
+    padding: 10px;
+    font-family:poppins;
+    font-weight: 700;
+    color: white;
+    font-size: 60px;
+}
+
+.h2{
+    text-align: center;
+    position: absolute;
+    top: 20vh;
+    padding: 10px;
+    font-family:Arial, Helvetica, sans-serif;
+    color: white;
+    font-size: 20px;
+}
+
+.kelas{
+
+    position: absolute;
+   padding: 10px;
+    top: 40vh;
+    display: inline-flex;
+}
+
+.glassicon{
+    --width:100px;
+    width: var(--width);
+    height: var(--width);
+    color: #fff;
+    font-size: 30px;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(2px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-right-color:rgba(255, 255, 255, 0.1) ;
+    border-bottom-color:rgba(255, 255, 255, 0.1) ;
+    box-shadow: 0 20px 30px rgba(0, 0, 0 , 0.1);
+    text-decoration: none;
+    margin: 20px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.glassicon, .glassicon * {
+    box-sizing: border-box;
+    transition: 200ms;
+}
+
+.glassicon:before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%; /* Menggunakan 100% dari lebar .glassicon */
+    height: 100%;
+    background: rgba(255, 255, 255, 0.5);
+    filter: blur(0px);
+    transition: transform 700ms; /* Hanya transisi transformasi */
+    transform-origin: right; /* Mengatur titik asal transformasi */
+    transform: skewX(45deg) translateX(calc(var(--width) / 0.2)); /* Menggeser ke kanan setengah lebar */
+}
+
+.glassicon:hover {
+    transform: translateY(-20px); /* Angkat sedikit saat hover */
+}
+
+.glassicon:hover:before {
+    transform: skewX(45deg) translateX(calc(var(--width) / -0.8)); /* Menggeser ke kiri setengah lebar */
+}
+
+.glassicon > * {
+    opacity: 0.8;
+}
